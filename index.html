@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <!--linking bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css"/>
+</head>
+<body style="background-color:rgb(174, 255, 219)";>
+    <div class="jumbotron text-center p-4 container-fluid" style="background-color:#fbffaf ;color: rgb(13, 12, 12);">
+        <h1><strong>Weather API</strong></h1>
+    </div>
+<!--makerow for the city-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 ">
+                <!-- button for search the city -->
+                <h2><strong>Search for City:</strong></h2>
+                    <input type="text" id="input" class="form-control" placeholder="Enter City">
+                    <div>
+                        <button id="search-button" class="btn bg-success text-light"><i class="fas fa-search"></i> Search </button>
+                        <button id="clear-button" class="btn bg-success text-light">Clear History</button>
+                        <ul id="list"></ul>
+                    </div>                 
+            </div>
+    <!--city information-->
+            <div class="col-sm-8">
+                <div class="row ml-2 border-dark rounded">
+                    <div class="col-12 ">
+                        <h3 id="current"><strong> Current City:  </strong></h3>
+                        <p>Temperature: <span id="temperature"></span> </p>
+                        <p>Humidity: <span id="humidity"></span></p>
+                        <p>Wind Speed: <span id="wind"></span></p>
+                        <p>UV Index: <span class="p-2 bg-success text-light" id="UV"></span></p>
+                    </div>
+                </div>
+                <!--next 5 day forecast-->
+                <div class="col-12" style="background-color: #fbffaf";>
+                    <h4>5 Day Forecast:  </h4>
+                    <div id="forecast" class="row text-light" style="background-color: #fbffaf";>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="./assets/js/script.js"></script>
+</html>
