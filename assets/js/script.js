@@ -130,7 +130,7 @@ function find(c){
     return 1;
 }
 
-//easiest part 
+//easiest part lmao
 $("#clear-button").on("click", function clear(e){
     e.preventDefault();
     localStorage.removeItem("city Name");
